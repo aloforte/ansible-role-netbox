@@ -192,6 +192,7 @@ LOGGING = {{ netbox_logging_config|to_json }}
 {% else %}
 LOGGING = {}
 {% endif %}
+
 LOGIN_PERSISTENCE = {{ netbox_logging_persistence }}
 
 LOGIN_REQUIRED = {{ netbox_login_required }}
