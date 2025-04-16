@@ -27,7 +27,7 @@
   when: not amazon_extras_repo.stat.exists or amzn2extras is failed
 
 - name: install.amazon | install tar
-  ansible.builtin.yum:
+  ansible.builtin.yum: # noqa:fqcn[action-core]
     name: tar
     state: present
   when: netbox_install_method != 'git'
