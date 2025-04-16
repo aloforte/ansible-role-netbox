@@ -7,3 +7,4 @@ tests/*.retry
 /.cache
 /venv
 /.venv
+/.ansible
