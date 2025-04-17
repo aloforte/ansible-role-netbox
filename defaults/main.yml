@@ -415,3 +415,7 @@ netbox_time_format:
   short_time: H:i:s
   datetime: N j, Y g:i a
   short_datetime: Y-m-d H:i
+
+# Netbox custom Logging configuration
+# This is a JSON dict with the logging configuration
+netbox_logging_config: {}

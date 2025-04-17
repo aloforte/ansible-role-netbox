@@ -186,7 +186,12 @@ INTERNAL_IPS = ('{{netbox_internal_ips|join("', '")}}')
 
 # Enable custom logging. Please see the Django documentation for detailed guidance on configuring custom logs:
 #   https://docs.djangoproject.com/en/stable/topics/logging/
+{% if netbox_logging_config != {} %}
+import logging.handlers
+LOGGING = {{ netbox_logging_config|to_json }}
+{% else %}
 LOGGING = {}
+{% endif %}
 
 LOGIN_PERSISTENCE = {{ netbox_logging_persistence }}
 
